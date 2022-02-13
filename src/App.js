@@ -13,8 +13,8 @@ import Filter from './components/Filter/Filter';
 import Navbar from './components/Navbar/Navbar';
 
 function App() {
-	/* API for Rick and Morty character data */
 	/**
+	 * ! API for Rick and Morty character data
 	 * * The useState() hook stores the data in the fetchedData variable and
 	 * * gives us a function key to change the varibale data whenever the useEffect()
 	 * * hook fetches new data. The fetchedData variable stores the data we get
@@ -39,7 +39,9 @@ function App() {
 		})();
 	}, [api]);
 
-  /* Render the app */
+	/**
+	 * ! Render the app
+	 */
 	return (
 		<div className='App'>
 			<h1 className='text-center mb-3'>Characters</h1>
