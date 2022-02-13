@@ -24,6 +24,16 @@ function App() {
 	 */
 	let [fetchedData, updateFetchedData] = useState([]);
 	let { info, results } = fetchedData;
+  /**
+   * ! Search bar to search characters
+   * * Two useState() hooks hold the values of our search keywords and current
+   * * page number. 
+   * * We then update our api variable with the search term and page number and our 
+   * * useEffect() will fetch the data when our api changes.
+   * * We pass our Search component into the return statement along with our state variables.
+   */
+  let [pageNumber, updatePageNumber] = useState(1);
+  let [search, setSearch] = useState('');
 
 	/**
 	 * * The useEffect() hook fetches the data from the rick and morty api,
@@ -31,7 +41,7 @@ function App() {
 	 * * load fresh data.
 	 * * The async function will fetch the raw data and convert it to JSON.
 	 */
-	let api = `https://rickandmortyapi.com/api/character/?page=1`;
+	let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
 	useEffect(() => {
 		(async function () {
 			let data = await fetch(api).then((response) => response.json());
@@ -40,12 +50,14 @@ function App() {
 		})();
 	}, [api]);
 
+
 	/**
 	 * ! Render the app
 	 */
 	return (
 		<div className='App'>
 			<h1 className='text-center mb-3'>Characters</h1>
+      <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
 			<div className='container'>
 				<div className='row'>
 					{/* Filter Component */}
