@@ -36,6 +36,7 @@ function App() {
 		(async function () {
 			let data = await fetch(api).then((response) => response.json());
 			updateFetchedData(data);
+      console.log(data);
 		})();
 	}, [api]);
 
@@ -49,7 +50,7 @@ function App() {
 				<div className='row'>
 					{/* Filter Component */}
 					<div className='col-lg-8 col-12'>
-						<div className='row'>{/* Card Component */}</div>
+						<div className='row'><Card results={results} /></div>
 					</div>
 				</div>
 			</div>
