@@ -24,16 +24,16 @@ function App() {
 	 */
 	let [fetchedData, updateFetchedData] = useState([]);
 	let { info, results } = fetchedData;
-  /**
-   * ! Search bar to search characters
-   * * Two useState() hooks hold the values of our search keywords and current
-   * * page number. 
-   * * We then update our api variable with the search term and page number and our 
-   * * useEffect() will fetch the data when our api changes.
-   * * We pass our Search component into the return statement along with our state variables.
-   */
-  let [pageNumber, updatePageNumber] = useState(1);
-  let [search, setSearch] = useState('');
+	/**
+	 * ! Search bar to search characters
+	 * * Two useState() hooks hold the values of our search keywords and current
+	 * * page number.
+	 * * We then update our api variable with the search term and page number and our
+	 * * useEffect() will fetch the data when our api changes.
+	 * * We pass our Search component into the return statement along with our state variables.
+	 */
+	let [pageNumber, updatePageNumber] = useState(1);
+	let [search, setSearch] = useState('');
 
 	/**
 	 * * The useEffect() hook fetches the data from the rick and morty api,
@@ -46,10 +46,9 @@ function App() {
 		(async function () {
 			let data = await fetch(api).then((response) => response.json());
 			updateFetchedData(data);
-      console.log(data);
+			console.log(data);
 		})();
 	}, [api]);
-
 
 	/**
 	 * ! Render the app
@@ -57,15 +56,18 @@ function App() {
 	return (
 		<div className='App'>
 			<h1 className='text-center mb-3'>Characters</h1>
-      <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
+			<Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
 			<div className='container'>
 				<div className='row'>
 					{/* Filter Component */}
 					<div className='col-lg-8 col-12'>
-						<div className='row'><Card results={results} /></div>
+						<div className='row'>
+							<Card results={results} />
+						</div>
 					</div>
 				</div>
 			</div>
+			<Pagination info={info} pageNumber={pageNumber} updatePageNumber={updatePageNumber} />
 		</div>
 	);
 }

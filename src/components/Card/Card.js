@@ -1,14 +1,14 @@
 import styles from './Card.module.scss';
 
 const Card = ({ results }) => {
-    /**
-     * * This will render a card for each character. We first initialise a display variable
-     * * that will hold the cards. Then we use an if statement to check the api returned data that 
-     * * is held in results. 
-     * * If there is data in results we map() over the data and create a card for each character.
-     * * We use a further if statement within the JSX to check the status of each character, which will
-     * * produce a badge stating wether they are 'Dead', 'Alive' or 'Unknown'.
-     */
+	/**
+	 * * This will render a card for each character. We first initialise a display variable
+	 * * that will hold the cards. Then we use an if statement to check the api returned data that
+	 * * is held in results.
+	 * * If there is data in results we map() over the data and create a card for each character.
+	 * * We use a further if statement within the JSX to check the status of each character, which will
+	 * * produce a badge stating wether they are 'Dead', 'Alive' or 'Unknown'.
+	 */
 	let display;
 	if (results) {
 		display = results.map((x) => {
