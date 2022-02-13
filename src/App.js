@@ -14,17 +14,6 @@ import Navbar from './components/Navbar/Navbar';
 
 function App() {
 	/**
-	 * ! API for Rick and Morty character data
-	 * * The useState() hook stores the data in the fetchedData variable and
-	 * * gives us a function key to change the varibale data whenever the useEffect()
-	 * * hook fetches new data. The fetchedData variable stores the data we get
-	 * * from the API, the updateFetchedData changes the data whenever we want.
-	 * * We destructure the data in fetchedData into info and results to make it
-	 * * easier later.
-	 */
-	let [fetchedData, updateFetchedData] = useState([]);
-	let { info, results } = fetchedData;
-	/**
 	 * ! Search bar to search characters
 	 * * Two useState() hooks hold the values of our search keywords and current
 	 * * page number.
@@ -36,12 +25,32 @@ function App() {
 	let [search, setSearch] = useState('');
 
 	/**
+	 * ! Filter section
+	 */
+	let [status, updateStatus] = useState('');
+	let [gender, updateGender] = useState('');
+	let [species, updateSpecies] = useState('');
+
+	/**
+	 * ! API for Rick and Morty character data
+	 * * The useState() hook stores the data in the fetchedData variable and
+	 * * gives us a function key to change the varibale data whenever the useEffect()
+	 * * hook fetches new data. The fetchedData variable stores the data we get
+	 * * from the API, the updateFetchedData changes the data whenever we want.
+	 * * We destructure the data in fetchedData into info and results to make it
+	 * * easier later.
+	 */
+	let [fetchedData, updateFetchedData] = useState([]);
+	let { info, results } = fetchedData;
+
+	/**
 	 * * The useEffect() hook fetches the data from the rick and morty api,
 	 * * with a watch put on the api, so if the api variable changes it will
 	 * * load fresh data.
 	 * * The async function will fetch the raw data and convert it to JSON.
 	 */
-	let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
+
+	let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 	useEffect(() => {
 		(async function () {
 			let data = await fetch(api).then((response) => response.json());
@@ -59,7 +68,14 @@ function App() {
 			<Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
 			<div className='container'>
 				<div className='row'>
-					{/* Filter Component */}
+					<Filter
+						pageNumber={pageNumber}
+						status={status}
+						updateStatus={updateStatus}
+						updateGender={updateGender}
+						updateSpecies={updateSpecies}
+						updatePageNumber={updatePageNumber}
+					/>
 					<div className='col-lg-8 col-12'>
 						<div className='row'>
 							<Card results={results} />
