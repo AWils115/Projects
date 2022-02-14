@@ -20,7 +20,7 @@ const Navbar = () => {
 					`}
 				</style>
                 <button 
-                    className='nabar-toggler border-0'
+                    className='navbar-toggler border-0'
                     type='button'
                     data-bs-toggle='collapse'
                     data-bs-target='#navbarNavAltMarkup'
