@@ -1,18 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap';
-
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Search from './components/Search/Search';
 import Card from './components/Card/Card';
 import Pagination from './components/Pagination/Pagination';
 import Filter from './components/Filter/Filter';
 import Navbar from './components/Navbar/Navbar';
+import Episodes from './Pages/Episodes';
+import Location from './Pages/Location';
+
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap';
 
 function App() {
+	/**
+	 * * This function is allows us to use React Router to navigate the pages of
+	 * * the app. The Route will lead to the path the app will go to and the element
+	 * * will get loaded.
+	 */
+
+	return (
+		<Router>
+			<div className='App'>
+				<Navbar />
+			</div>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/episodes' element={<Episodes />} />
+				<Route path='/location' element={<Location />} />
+			</Routes>
+		</Router>
+	);
+}
+
+const Home = () => {
 	/**
 	 * ! Search bar to search characters
 	 * * Two useState() hooks hold the values of our search keywords and current
@@ -86,6 +108,6 @@ function App() {
 			<Pagination info={info} pageNumber={pageNumber} updatePageNumber={updatePageNumber} />
 		</div>
 	);
-}
+};
 
 export default App;
