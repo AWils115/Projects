@@ -2,12 +2,12 @@ import React from 'react';
 import FilterBTN from '../FilterBTN';
 
 const Status = ({ updateStatus, updatePageNumber }) => {
-      /**
-     * * Adds filter buttons to the Status category, we map over the possible status and
-     * * returns a button for each one. When the user clicks a button the status variable is
-     * * updated in the api.
-     */
-    
+	/**
+	 * * Adds filter buttons to the Status category, we map over the possible status and
+	 * * returns a button for each one. When the user clicks a button the status variable is
+	 * * updated in the api.
+	 */
+
 	let status = ['Alive', 'Dead', 'Unknown'];
 	return (
 		<div className='accordion-item'>

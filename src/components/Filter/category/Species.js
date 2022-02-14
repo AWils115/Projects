@@ -2,12 +2,12 @@ import React from 'react';
 import FilterBTN from '../FilterBTN';
 
 const Species = ({ updateSpecies, updatePageNumber }) => {
-      /**
-     * * Adds filter buttons to the Species category, we map over the possible species and
-     * * returns a button for each one. When the user clicks a button the species variable is
-     * * updated in the api.
-     */
-    
+	/**
+	 * * Adds filter buttons to the Species category, we map over the possible species and
+	 * * returns a button for each one. When the user clicks a button the species variable is
+	 * * updated in the api.
+	 */
+
 	let species = [
 		'Human',
 		'Alien',

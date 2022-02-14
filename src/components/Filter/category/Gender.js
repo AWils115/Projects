@@ -2,11 +2,11 @@ import React from 'react';
 import FilterBTN from '../FilterBTN';
 
 const Gender = ({ updateGender, updatePageNumber }) => {
-    /**
-     * * Adds filter buttons to the Gender category, we map over the possible genders and
-     * * returns a button for each one. When the user clicks a button the gender variable is
-     * * updated in the api.
-     */
+	/**
+	 * * Adds filter buttons to the Gender category, we map over the possible genders and
+	 * * returns a button for each one. When the user clicks a button the gender variable is
+	 * * updated in the api.
+	 */
 
 	let genders = ['female', 'male', 'genderless', 'unknown'];
 	return (
