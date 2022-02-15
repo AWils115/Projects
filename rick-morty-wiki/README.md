@@ -18,7 +18,7 @@
 ---
 
 <img src='./screenshots/rick-morty-wicki.png' style=''/>
-<div style='display: flex; gap: 2px; justify-content: center'>
+<div style='display: flex; gap: 2px; justify-content: center;'>
     <img src='./screenshots/rick-morty-wiki-2.png' style='width: 47%;' />
     <img src='./screenshots/rick-morty-wiki-3.png' style='width: 47%; ' />
 </div>
