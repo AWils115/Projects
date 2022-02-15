@@ -1,5 +1,5 @@
 # Rick and Morty WiKi
- 
+
  This project is a Rick and Morty character WiKi created using React.
 
  ---
