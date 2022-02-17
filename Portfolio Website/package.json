@@ -4,14 +4,14 @@
 	"description": "Personal portfolio website",
 	"main": "index.js",
 	"scripts": {
-		"compile:scss": "node-sass sass/main.scss css/style.css -w",
-		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.css",
-		"compress:css": "node-sass css/style.css css/style.css --output-style compressed",
-		"build": "npm-run-all prefix:css compress:css"
+		"scss": "node-sass --watch sass -o css"
 	},
 	"author": "Alex Wilson",
 	"license": "ISC",
 	"devDependencies": {
 		"sass": "^1.49.7"
+	},
+	"dependencies": {
+		"node-sass": "^7.0.1"
 	}
 }
