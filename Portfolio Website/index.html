@@ -14,7 +14,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Hind+Guntur&family=Hind+Siliguri&family=Roboto:wght@700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
@@ -22,8 +22,8 @@
 		<header class="header">
 			<div class="header__content">
 				<div class="header__logo-container">
-					<img src="./assets/logoipsum-logo-54.svg" alt="logo" class="header__logo-cont-img" />
-					<span class="header__logo-cont-sub">Alex Wilson</span>
+					<img src="./assets/logoipsum-logo-54.svg" alt="logo" class="header__logo-img-cont" />
+					<span class="header__logo-sub">Alex Wilson</span>
 				</div>
 				<nav class="header__main">
 					<ul class="header__links">
@@ -41,7 +41,7 @@
 						</li>
 					</ul>
 					<div class="header__main-ham-menu-cont">
-						<i class="fa-solid fa-bars header__main-ham-menu-open"></i>
+						<i class="fa-solid fa-bars header__main-ham-menu"></i>
 						<i class="fa-solid fa-xmark header__main-ham-menu-close"></i>
 					</div>
 				</nav>
@@ -85,7 +85,7 @@
 			</section>
 			<section id="about" class="about sec-pad">
 				<div class="main-container">
-					<h2 class="heading heading-sec">
+					<h2 class="heading heading-sec heading-sec__mb-med">
 						<span class="heading-sec__main">About Me</span>
 						<span class="heading-sec__sub">
 							Ut quo nulla. Excepturi odit optio. Omnis alias eos consequatur maiores totam.
@@ -106,7 +106,7 @@
 									architecto.
 								</p>
 							</div>
-							<a href="./#contact" class="btn">Contct</a>
+							<a href="./#contact" class="btn btn--med btn--theme dynamicBgClr">Contact</a>
 						</div>
 						<div class="about__content-skils">
 							<h3 class="about__content-title">My Skills</h3>
@@ -124,9 +124,9 @@
 					</div>
 				</div>
 			</section>
-			<section id="projects" class="projects">
+			<section id="projects" class="projects sec-pad">
 				<div class="main-container">
-					<h2 class="heading heading-sec">
+					<h2 class="heading heading-sec heading-sec__mb-bg">
 						<span class="heading-sec__main">Projects</span>
 						<span class="heading-sec__sub"
 							>Sapiente qui quod commodi similique. Beatae quo libero eos quia minima enim aut
@@ -136,19 +136,23 @@
 					</h2>
 					<div class="projects__content">
 						<div class="projects__row">
-							<img
-								src="./assets/417-300x200.jpg"
-								alt="project image"
-								class="projects__row-img"
-								loading="lazy"
-							/>
+							<div class="projects__row-img-cont">
+								<img
+									src="./assets/417-300x200.jpg"
+									alt="project image"
+									class="projects__row-img"
+									loading="lazy"
+								/>
+							</div>
 							<div class="projects__row-content">
 								<h3 class="projects__row-content-title">Project 1</h3>
 								<p class="project__row-content-desc">
 									Ullam recusandae odit hic harum iure vel. Sit odio autem aspernatur porro. Neque
 									et cum corporis quibusdam autem nulla.
 								</p>
-								<a href="#" class="btn" target="_blank">Case Study</a>
+								<a href="#" class="btn btn--med btn--theme dynamicBgClr" target="_blank"
+									>Case Study</a
+								>
 							</div>
 						</div>
 						<div class="projects__row">
@@ -168,45 +172,53 @@
 							</div>
 						</div>
 						<div class="projects__row">
-							<img
-								src="./assets/417-300x200.jpg"
-								alt="project image"
-								class="projects__row-img"
-								loading="lazy"
-							/>
+							<div class="projects__row-img-cont">
+								<img
+									src="./assets/417-300x200.jpg"
+									alt="project image"
+									class="projects__row-img"
+									loading="lazy"
+								/>
+							</div>
 							<div class="projects__row-content">
 								<h3 class="projects__row-content-title">Project 3</h3>
 								<p class="project__row-content-desc">
 									Ullam recusandae odit hic harum iure vel. Sit odio autem aspernatur porro. Neque
 									et cum corporis quibusdam autem nulla.
 								</p>
-								<a href="#" class="btn" target="_blank">Case Study</a>
+								<a href="#" class="btn btn--med btn--theme dynamicBgClr" target="_blank"
+									>Case Study</a
+								>
 							</div>
 						</div>
 						<div class="projects__row">
-							<img
-								src="./assets/417-300x200.jpg"
-								alt="project image"
-								class="projects__row-img"
-								loading="lazy"
-							/>
+							<div class="projects__row-img-cont">
+								<img
+									src="./assets/417-300x200.jpg"
+									alt="project image"
+									class="projects__row-img"
+									loading="lazy"
+								/>
+							</div>
 							<div class="projects__row-content">
 								<h3 class="projects__row-content-title">Project 4</h3>
 								<p class="project__row-content-desc">
 									Ullam recusandae odit hic harum iure vel. Sit odio autem aspernatur porro. Neque
 									et cum corporis quibusdam autem nulla.
 								</p>
-								<a href="#" class="btn" target="_blank">Case Study</a>
+								<a href="#" class="btn btn--med btn--theme dynamicBgClr" target="_blank"
+									>Case Study</a
+								>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="contact" class="contact">
+			<section id="contact" class="contact sec-pad dynamicBg">
 				<div class="main-container">
-					<h2 class="heading heading-sec">
-						<span class="heading-sec__main">Contact</span>
-						<span class="heading-sec__sub">
+					<h2 class="heading heading-sec heading-sec__mb-med">
+						<span class="heading-sec__main heading-sec__main--lt">Contact</span>
+						<span class="heading-sec__sub heading-sec__sub--lt">
 							Ut quo nulla. Excepturi odit optio. Omnis alias eos consequatur maiores totam.
 							Deserunt perspiciatis quibusdam deserunt repudiandae dolores sed maiores dicta. Sunt
 							est beatae.
@@ -247,16 +259,16 @@
 									class="contact__form-input"
 								></textarea>
 							</div>
-							<button class="btn contact__btn" type="submit">Submit</button>
+							<button class="btn btn--theme contact__btn" type="submit">Submit</button>
 						</form>
 					</div>
 				</div>
 			</section>
 			<footer class="main-footer">
-				<div class="main-con">
+				<div class="main-container">
 					<div class="main-footer__upper">
 						<div class="main-footer__row main-footer__row-1">
-							<h2 class="heading main-footer__heading">
+							<h2 class="heading heading-sm main-footer__heading">
 								<span>Social</span>
 							</h2>
 							<div class="main-footer__social-cont">
@@ -271,8 +283,8 @@
 								</a>
 							</div>
 						</div>
-						<div class="main-footer__row-2">
-							<h4 class="heading">Alex Wilson</h4>
+						<div class="main-footer__row main-footer__row-2">
+							<h4 class="heading heading-sm text-lt">Alex Wilson</h4>
 							<p class="main-footer__short-desc">
 								In nihil aspernatur quaerat vero quia reiciendis voluptatem rerum. Earum fugit
 								consequatur consequatur. Accusamus facilis et iure. Id laboriosam dolores.

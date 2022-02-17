@@ -8,19 +8,19 @@
 }
 
 html {
-	font-size: 62.5%;
+	font-size: 62.5%; // Define 1rem as 16 * 62.5% = 10px
 	scroll-behavior: smooth;
 
 	@include respond(tab-land) {
-		font-size: 59%;
+		font-size: 59%; // if screen size < 1200px reduce rem
 	}
 
 	@include respond(tab-port) {
-		font-size: 56%;
+		font-size: 56%; // if screen size < 900px reduce rem
 	}
 
 	@include respond(big-desktop) {
-		font-size: 65%;
+		font-size: 65%; // if screen size > 1800px increase rem
 	}
 }
 

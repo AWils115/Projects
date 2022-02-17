@@ -1,3 +1,11 @@
+/* Media Query Manager
+0 - 600px = Phone
+601 - 900px = Tablet Portrait
+901 - 1200px = Tablet Landscape
+1201 - 1800px normal styles
+1801+px = Big Desktop
+*/
+
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) {
