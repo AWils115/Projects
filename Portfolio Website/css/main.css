@@ -219,6 +219,77 @@ textarea {
   resize: none;
 }
 
+.main-footer {
+  background: #000;
+  color: #fff;
+}
+.main-footer__upper {
+  display: flex;
+  justify-content: space-between;
+  padding: 8rem 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .main-footer__upper {
+    padding: 6rem 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .main-footer__upper {
+    display: block;
+  }
+}
+.main-footer__row-1 {
+  order: 2;
+}
+@media only screen and (max-width: 56.25em) {
+  .main-footer__row-1 {
+    margin-bottom: 5rem;
+  }
+}
+.main-footer__row-2 {
+  width: 40%;
+  order: 1;
+  max-width: 50rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .main-footer__row-2 {
+    width: 100%;
+  }
+}
+.main-footer__short-desc {
+  margin-top: 2rem;
+  color: #eee;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+.main-footer__social-cont {
+  margin-top: 2rem;
+}
+.main-footer__icon {
+  margin-right: 1rem;
+  width: 2.5rem;
+}
+.main-footer__icon--mr-none {
+  margin-right: none;
+}
+.main-footer__lower {
+  padding: 4rem 0;
+  border-top: 1px solid #444;
+  color: #eee;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.main-footer__lower a {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 2px;
+}
+@media only screen and (max-width: 56.25em) {
+  .main-footer__lower {
+    padding: 3.5rem 0;
+  }
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -311,6 +382,56 @@ textarea {
   .header__main-ham-menu-cont {
     display: block;
   }
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #eee;
+  border-radius: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.mouse::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #eee;
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-animation: wheel 1.3s infinite;
+  animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
+}
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills__skill {
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.6rem;
+  background: rgba(153, 153, 153, 0.2);
+  border-radius: 5px;
+  font-weight: 500;
+  color: #777;
 }
 
 .home-hero {
@@ -491,6 +612,98 @@ textarea {
 @media only screen and (max-width: 37.5em) {
   .projects__row-content-desc {
     font-size: 1.7rem;
+  }
+}
+
+.contact {
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8));
+  background-size: cover;
+  background-position: center;
+}
+.contact__form-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 4rem;
+  margin-top: 6rem;
+  max-width: 80rem;
+  text-align: right;
+  width: 95%;
+  border-radius: 5px;
+  margin: 5rem auto 0 auto;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact__form-container {
+    padding: 3rem;
+  }
+}
+.contact__form-field {
+  margin-bottom: 4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact__form-field {
+    margin-bottom: 3rem;
+  }
+}
+.contact__form-label {
+  color: #666;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: left;
+}
+.contact__form-input {
+  color: #333;
+  padding: 2rem;
+  width: 100%;
+  border: 1px solid #ebebeb;
+  font-size: 1.6rem;
+  letter-spacing: 0px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.contact__form-input::placeholder {
+  color: #999;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.contact__form-input::-webkit-input-placeholder {
+  color: #999;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.contact__form-input:-ms-input-placeholder {
+  color: #999;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.contact__form-input::-ms-input-placeholder {
+  color: #999;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.contact__form-input:-moz-placeholder {
+  opacity: 1;
+  color: #999;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.contact__form-input::-moz-placeholder {
+  opacity: 1;
+  color: #999;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.contact__btn {
+  width: 30%;
+  padding: 2rem 4rem;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact__btn {
+    width: 100%;
   }
 }
 
