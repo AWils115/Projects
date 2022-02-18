@@ -6,9 +6,9 @@
         margin-bottom: 1.5rem;
         margin-right: 1.5rem;
         font-size: 1.6rem;
-        background: rgba(#999, 0.2);
+        background: $bg-darker;
         border-radius: $border-radius;
-        font-weight: 500;
-        color: #777;
+        font-weight: $norm-text;
+        color: $text-dark-secondary;
     }
 }

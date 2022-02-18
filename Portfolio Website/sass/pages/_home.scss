@@ -1,7 +1,8 @@
 .home-hero {
-    color: #000;
-    background: linear-gradient(to right, rgba($themeClrPrimary, 0.8), rgba($themeClrPrimary, 0.8));
+    color: $text-dark-primary;
+    background: linear-gradient(to right, rgba($primary, 0.8), rgba($secondary, 0.8));
     background-position: center;
+    background-size: cover;
     height: 100vh;
     min-height: 80rem;
     max-height: 120rem;
@@ -13,8 +14,8 @@
     &__socials {
         position: absolute;
         top: 50%;
-        border: 2px solid #eee;
-        border-left: 2px solid #eee;
+        border: 2px solid $bg-lighter;
+        border-left: 2px solid $bg-lighter;
         transform: translateY(-50%);
         @include respond(tab-port) {
             display: none;
@@ -29,24 +30,18 @@
             display: none;
         }
     }
-    &__social {
-        width: 5rem;
-    }
     &__social-icon-link {
         width: 100%;
         display: block;
-        padding: 1.2rem;
-        border-bottom: 2px solid #eee;
+        padding: 1rem;
+        border-bottom: 2px solid $bg-lighter;
         transition: background .3s;
         &:hover {
-            background: rgba(#fff, .1);
+            background: rgba($text-light-primary, .1);
         }
         &--bd-none {
             border-bottom: none;
         }
-    }
-    &__social-icon {
-        width: 100%;
     }
     &__content {
         position: relative;
@@ -82,22 +77,23 @@
             grid-template-columns: 1fr;
             grid-gap: 8rem;
         }
-        &__title {
-            font-weight: 700;
-            font-size: 2.8rem;
-            margin-bottom: 3rem;
+        &-title {
+            font-weight: $bold-text;
+            font-size: 2.2rem;
+            margin-bottom: 2.2rem;
             @include respond(phone) {
                 font-size: 2.4rem;
             }
         }
         &-details-para {
             font-size: 1.8rem;
-            color: grey;
+            font-weight: $med-text;
+            color: $text-light-secondary;
             max-width: 60rem;
             line-height: 1.7;
             margin-bottom: 1rem;
             &--hl {
-                font-weight: 700;
+                font-weight: $bold-text;
                 margin: 0 3px;
             }
             &:last-child {
@@ -140,7 +136,7 @@
                 align-items: center;
             }
             &-title {
-                font-weight: 700;
+                font-weight: $bold-text;
                 font-size: 2.8rem;
                 margin-bottom: 2rem;
                 @include respond(phone) {
@@ -149,7 +145,8 @@
             }
             &-desc {
                 font-size: 1.8rem;
-                color: grey;
+                font-weight: $med-text;
+                color: $text-light-secondary;
                 max-width: 60rem;
                 line-height: 1.7;
                 margin-bottom: 3rem;
@@ -162,12 +159,12 @@
 }
 
 .contact {
-    background: linear-gradient(to right, rgba($themeClrPrimary, 0.8), rgba($themeClrPrimary, 0.8));
+    background: linear-gradient(to right, rgba($primary, 0.8), rgba($secondary, 0.8));
     background-size: cover;
     background-position: center;
     &__form-container {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background: rgba(#fff, 2);
+        background: rgba($text-light-primary, 2);
         padding: 4rem;
         margin-top: 6rem;
         max-width: 80rem;
@@ -186,54 +183,54 @@
         }
     }
     &__form-label {
-        color: #666;
+        color: $text-light-secondary;
         font-size: 1.4rem;
         letter-spacing: 1px;
-        font-weight: 700;
+        font-weight: $bold-text;
         margin-bottom: 1rem;
         display: block;
         text-align: left;
     }
     &__form-input {
-        color: #333;
+        color: $text-dark-secondary;
         padding: 2rem;
         width: 100%;
         border: 1px solid rgb(235, 235, 235);
         font-size: 1.6rem;
         letter-spacing: 0px;
-        background: rgba(rgb(240, 240, 240), 1);
+        background: $bg-darker;
         border-radius: $border-radius;
-        font-weight: 500;
+        font-weight: $med-text;
         &::placeholder {
             color: #999;
-            font-weight: 700;
+            font-weight: $med-text;
             font-size: 1.6rem;
         }
         &::-webkit-input-placeholder {
             color: #999;
-            font-weight: 700;
+            font-weight: $med-text;
             font-size: 1.6rem;
         }
         &:-ms-input-placeholder {
             color: #999;
-            font-weight: 700;
+            font-weight: $med-text;
             font-size: 1.6rem;
         }
         &::-ms-input-placeholder {
             color: #999;
-            font-weight: 700;
+            font-weight: $med-text;
             font-size: 1.6rem;
         }
         &:-moz-placeholder {
             opacity: 1;
             color: #999;
-            font-weight: 700;
+            font-weight: $med-text;
             font-size: 1.6rem;
         }
         &::-moz-placeholder {
             opacity: 1;
             color: #999;
-            font-weight: 700;
+            font-weight: $med-text;
             font-size: 1.6rem;
         }
     }

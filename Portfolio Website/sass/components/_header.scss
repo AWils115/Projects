@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     z-index: 1000;
-    background: #fff;
+    background: $bg-lighter;
     box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
     &__content {
         display: flex;
@@ -17,10 +17,10 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        color: #333;
+        color: $text-dark-primary;
         transition: color .3s;
         &:hover {
-            color: $themeClrPrimary;
+            color: $secondary-dark;
         }
     }
     &__logo-img-cont {
@@ -29,7 +29,7 @@
         border-radius: 50px;
         overflow: hidden;
         margin-right: 1.5rem;
-        background: $themeClrPrimary;
+        background: $primary-dark;
         @include respond(tab-port) {
             width: 4.5rem;
             height: 4.5rem;
@@ -46,7 +46,7 @@
     &__logo-sub {
         font-size: 1.8rem;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: $bold-text;
         letter-spacing: 1px;
     }
     &__links {
@@ -55,23 +55,25 @@
             display: block;
             position: absolute;
             top: 100%;
-            right: 5%;
+            left: 50%;
+            transform: translateX(-50%);
             transition: height 2s ease;
             height: 0;
             overflow: hidden;
+            width: 100%;
         }
     }
     &__link {
         padding: 2.5rem 3rem;
         display: inline-block;
         font-size: 1.6rem;
-        color: #333;
+        color: $text-dark-secondary;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-weight: 700;
+        font-weight: $bold-text;
         transition: color .3s;
         &:hover {
-            color: $themeClrPrimary;
+            color: $secondary-dark;
         }
         @include respond(tab-port) {
             padding: 3rem 1.8rem;
@@ -79,9 +81,9 @@
         }
         @include respond(phone) {
             padding: 1rem;
-            border: 1px solid grey;
+            border: 1px solid $bg-darker;
             width: 100%;
-            background: #eee;
+            background: $bg-lighter;
         }
     }
     &__main-ham-menu {
@@ -92,11 +94,11 @@
         &-open {
             @include respond(phone) {
                 --fa-display: block;
-                border: 3px solid grey;
+                border: 3px solid $bg-darker;
                 width: 4.2rem;
                 text-align: center;
                 border-radius: $border-radius;
-                color: grey;
+                color: $text-light-secondary;
                 &:hover {
                     transform: rotate(180deg);
                     transition: transform 1.5s ease;
@@ -106,11 +108,11 @@
         &-close {
             @include respond(phone) {
                 --fa-display: block;
-                border: 3px solid grey;
+                border: 3px solid $bg-darker;
                 width: 4.2rem;
                 text-align: center;
                 border-radius: $border-radius;
-                color: grey;
+                color: $text-light-secondary;
                 &:hover {
                     transform: rotate(180deg);
                     transition: transform 1.5s ease;

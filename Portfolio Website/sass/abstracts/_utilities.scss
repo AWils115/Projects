@@ -1,6 +1,5 @@
 .heading-primary {
     font-size: 6rem;
-    font-family: $heading;
     text-align: center;
 
     @include respond(phone) {
@@ -44,7 +43,7 @@
             top: calc(100% + 1.5rem);
             height: 5px;
             width: 3rem;
-            background: $themeClrPrimary;
+            background: $primary;
             left: 50%;
             transform: translateX(-50%);
             border-radius: $border-radius;
@@ -57,9 +56,9 @@
     &__sub {
         display: block;
         text-align: center;
-        color: #777;
+        color: $text-light-secondary;
         font-size: 2rem;
-        font-weight: 500;
+        font-weight: $med-text;
         max-width: 80rem;
         margin: auto;
         line-height: 1.6;
@@ -86,12 +85,12 @@
 }
 
 .btn {
-    background: #fff;
-    color: #333;
+    background: $secondary-light;
+    color: $text-light-primary;
     text-transform: uppercase;
     letter-spacing: 2px;
     display: inline-block;
-    font-weight: 700;
+    font-weight: $bold-text;
     border-radius: $border-radius;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     transition: transform .3s;
@@ -110,14 +109,14 @@
     }
 
     &--theme {
-        background: $themeClrPrimary;
-        color: #fff;
+        background: $secondary;
+        color: $text-light-primary;
     }
 
     &--theme-inv {
-        color: $themeClrPrimary;
+        color: $primary;
         background: #fff;
-        border: 2px solid $themeClrPrimary;
+        border: 2px solid $secondary;
         box-shadow: none;
         padding: calc(1.5rem - 2px) calc(5rem - 2px);
     }
@@ -131,7 +130,7 @@
 }
 
 .text-primary {
-    color: #fff;
+    color: $text-light-primary;
     font-size: 2.2rem;
     text-align: center;
     width: 100%;

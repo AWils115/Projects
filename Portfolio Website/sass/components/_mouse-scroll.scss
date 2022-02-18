@@ -1,10 +1,11 @@
 .mouse {
-    width: 25px;
-    height: 40px;
-    border: 2px solid #eee;
+    width: 4rem;
+    height: 5rem;
+    border: 2px solid $bg-lighter;
     border-radius: 60px;
     position: relative;
     overflow: hidden;
+    padding: 0.35rem;
     &::before {
         content: '';
         width: 5px;
@@ -13,7 +14,7 @@
         top: 7px;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #eee;
+        background-color: $bg-lighter;
         border-radius: 50%;
         opacity: 1;
         -webkit-animation: wheel 1.3s infinite;

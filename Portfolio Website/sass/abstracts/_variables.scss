@@ -1,7 +1,12 @@
-// Fonts
+// Typography
 $heading: Roboto, sans-serif;
-$sub-heading: 'Hind Siliguri', sans-serif;
-$text: 'Hind Guntur', sans-serif;
+$bold-text: 700;
+$med-text: 500;
+$norm-text: 300;
+$text-dark-primary: rgb(0, 0, 0);
+$text-dark-secondary: rgb(75, 75, 75);
+$text-light-primary: rgb(255, 255, 255);
+$text-light-secondary: rgb(134, 134, 134);
 
 // Borders
 $border-radius: 5px;
@@ -9,10 +14,10 @@ $border-radius: 5px;
 // Colors
 $bg-darker: #E1E2E1;
 $bg-lighter: #F5F5F6;
-$primary: #b0bec5;
+$primary: #b0d2e4;
 $primary-light: #e2f1f9;
 $primary-dark: #808e95;
-$secondary: #455a64;
+$secondary: #476472;
 $secondary-light: #718792;
 $secondary-dark: #1c313a;
 $themeClrPrimary: #0062b9;
