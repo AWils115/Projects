@@ -17,7 +17,7 @@ const AppReducer = (state, action) => {
 				...state,
 				budget: action.payload,
 			};
-		default:
+			default:
 			return state;
 	}
 };
