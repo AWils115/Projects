@@ -8,10 +8,6 @@ This repository contains all the files I have created as part of projects comple
 
 Below is a short summary of each project within this repository.
 
-// TODO //
-
-Screenshots of projects
-
 <details>
 
 <summary><strong>Rick and Morty Wiki</strong></summary>
@@ -35,7 +31,6 @@ Screenshots of projects
 <p>A portfolio website using Dopefolio as inspiration and incorporating SASS styling.</p>
 
 </details>
-
 
 ---
 
