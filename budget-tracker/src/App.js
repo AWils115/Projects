@@ -5,6 +5,7 @@ import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AddExpenseForm from './components/AddExpenseForm';
+import ChangeBudget from './components/ChangeBudget';
 import { AppProvider } from './context/AppContext';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -35,6 +36,12 @@ const App = () => {
 				<div className='row mt-3'>
 					<div className='col-sm'>
 						<AddExpenseForm />
+					</div>
+				</div>
+				<h3 className='mt-3'>Change Budget</h3>
+				<div className='row mt-3'>
+					<div className='col-sm'>
+						<ChangeBudget />
 					</div>
 				</div>
 			</div>

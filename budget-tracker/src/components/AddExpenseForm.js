@@ -21,6 +21,9 @@ const AddExpenseForm = () => {
 			type: 'ADD_EXPENSE',
 			payload: expense,
 		});
+
+		setName('');
+		setCost('');
 	};
 
 	return (
