@@ -11,42 +11,43 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
-const ChartPanel = () => {
+var times = require('../data/times.json')
+var heartRate = require('../data/heartrate.json')
+
+const LineChart = (props) => {
   Chartjs.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
   const options = {
     responsive: true,
     plugins: {
       legend: {
+        display: props.legend,
         position: 'top',
       },
       title: {
         display: true,
-        text: 'Chart.js Line Chart'
+        text: props.title,
       },
     },
   };
 
-  const labels = ['Jan', 'Feb', 'Mar']
+  const labels = props.xAxis
 
   const data = {
     labels,
     datasets: [
       {
-        label: 'Dataset 1',
-        data: [10, 4, 7],
+        label: props.label,
+        data: props.yAxis,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgb(255, 99, 132)'
-      },
-      {
-        label: 'Dataset 2',
-        data: [15, 8, 19],
-        borderColor: 'rgb(53, 162, 235)',
-        backgroundColor: 'rgb(53, 162, 235)'
       }
     ]
   }
-	return <Line options={options} data={data} />;
+	return (
+    <div className='chart-container'>
+      <Line options={options} data={data} />
+    </div>);
 };
 
-export default ChartPanel;
+export default LineChart;

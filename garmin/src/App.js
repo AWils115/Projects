@@ -2,11 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import ChartPanel from './components/ChartPanel';
+import LineChart from './components/LineChart';
 import Training from './Pages/Training';
 import Nutrition from './Pages/Nutrition';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Line } from 'react-chartjs-2';
+
+var times = require('./data/times.json')
+var heartRate = require('./data/heartrate.json')
 
 const App = () => {
 	return (
@@ -28,14 +32,19 @@ const Home = () => {
 		<div className='App'>
 			<div className='row'>
 				<div className='col-sm-6'>
-					<ChartPanel />
+					<LineChart yAxis={heartRate} xAxis={times} title='Daily Heart Rate' legend={false} label='Heart Rate' />
 				</div>
 				<div className='col-sm-6'>
-					<ChartPanel />
+					<LineChart />
 				</div>
-				<div className='row'>
-					<div className='col-sm'>
-						<ChartPanel />
+				<div className='row justify-content-md-center'>
+					<div className='col-sm-10'>
+						<LineChart />
+					</div>
+				</div>
+				<div className='row justify-content-md-center'>
+					<div className='col-sm-10'>
+						<LineChart />
 					</div>
 				</div>
 			</div>
