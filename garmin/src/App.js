@@ -6,6 +6,7 @@ import LineChart from './components/LineChart';
 import Training from './Pages/Training';
 import Nutrition from './Pages/Nutrition';
 
+import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Line } from 'react-chartjs-2';
 
