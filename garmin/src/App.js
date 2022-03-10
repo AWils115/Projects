@@ -10,8 +10,8 @@ import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Line } from 'react-chartjs-2';
 
-var times = require('./data/times.json')
-var heartRate = require('./data/heartrate.json')
+var times = require('./data/times.json');
+var heartRate = require('./data/heartrate.json');
 
 const App = () => {
 	return (
@@ -33,20 +33,13 @@ const Home = () => {
 		<div className='App'>
 			<div className='row'>
 				<div className='col-sm-6'>
-					<LineChart yAxis={heartRate} xAxis={times} title='Daily Heart Rate' legend={false} label='Heart Rate' />
-				</div>
-				<div className='col-sm-6'>
-					<LineChart />
-				</div>
-				<div className='row justify-content-md-center'>
-					<div className='col-sm-10'>
-						<LineChart />
-					</div>
-				</div>
-				<div className='row justify-content-md-center'>
-					<div className='col-sm-10'>
-						<LineChart />
-					</div>
+					<LineChart
+						yAxis={heartRate}
+						xAxis={times}
+						title='Daily Heart Rate'
+						legend={false}
+						label='Heart Rate'
+					/>
 				</div>
 			</div>
 		</div>

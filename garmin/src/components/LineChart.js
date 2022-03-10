@@ -10,12 +10,13 @@ import {
 	Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import annotationPlugin from 'chartjs-plugin-annotation';
 
 var times = require('../data/times.json')
 var heartRate = require('../data/heartrate.json')
 
 const LineChart = (props) => {
-  Chartjs.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
+  Chartjs.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, annotationPlugin)
 
   const options = {
     responsive: true,
@@ -27,6 +28,22 @@ const LineChart = (props) => {
       title: {
         display: true,
         text: props.title,
+      },
+      annotation: {
+        annotations: {
+          line1: {
+            type: 'line',
+            yMin: 60,
+            yMax: 60,
+            borderColor: 'black',
+            borderWidth: 2
+          }
+        }
+      }
+    },
+    elements: {
+      point: {
+        radius: 0,
       },
     },
   };
@@ -41,6 +58,12 @@ const LineChart = (props) => {
         data: props.yAxis,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgb(255, 99, 132)'
+      },
+      {
+        label: 'Resting Heart Rate',
+        data: [],
+        borderColor: 'black',
+        backgroundColor: 'black'
       }
     ]
   }
