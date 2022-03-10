@@ -36,7 +36,11 @@ const LineChart = (props) => {
             yMin: 60,
             yMax: 60,
             borderColor: 'black',
-            borderWidth: 2
+            borderWidth: 2,
+            label: {
+              content: 'Resting',
+              enabled: true,
+            }
           }
         }
       }
