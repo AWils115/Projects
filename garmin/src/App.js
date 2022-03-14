@@ -8,10 +8,7 @@ import Nutrition from './Pages/Nutrition';
 
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Line } from 'react-chartjs-2';
-
-var times = require('./data/times.json');
-var heartRate = require('./data/heartrate.json');
+import LastActivity from './components/LastActivity';
 
 const App = () => {
 	return (
@@ -21,8 +18,8 @@ const App = () => {
 			</div>
 			<Routes>
 				<Route path='/' element={<Home />} />
-				<Route path='./training' element={<Training />} />
-				<Route path='./nutrition' element={<Nutrition />} />
+				<Route path='/training' element={<Training />} />
+				<Route path='/nutrition' element={<Nutrition />} />
 			</Routes>
 		</Router>
 	);
@@ -33,13 +30,10 @@ const Home = () => {
 		<div className='App'>
 			<div className='row'>
 				<div className='col-sm-6'>
-					<LineChart
-						yAxis={heartRate}
-						xAxis={times}
-						title='Daily Heart Rate'
-						legend={false}
-						label='Heart Rate'
-					/>
+					<LineChart />
+				</div>
+				<div className="col-sm-4">
+					<LastActivity />
 				</div>
 			</div>
 		</div>

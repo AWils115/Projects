@@ -4,7 +4,11 @@ import ActivityCard from '../components/ActivityCard';
 const Training = () => {
   return (
     <div>
-      <ActivityCard />
+      <div className='row'>
+        <div className='col-sm'>
+          <ActivityCard />
+        </div>
+      </div>
     </div>
   )
 };

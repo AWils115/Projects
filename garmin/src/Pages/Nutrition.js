@@ -1,5 +1,11 @@
 import React from 'react';
 
-const Nutrition = () => {};
+const Nutrition = () => {
+  return (
+    <div className="container">
+      <h1>Nutrition Page</h1>
+    </div>
+  )
+};
 
 export default Nutrition;
