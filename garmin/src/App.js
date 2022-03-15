@@ -10,6 +10,7 @@ import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LastActivity from './components/LastActivity';
 import ProgressBar from './components/ProgressBar';
+import PieChart from './components/PieChart';
 
 const App = () => {
 	return (
@@ -28,16 +29,39 @@ const App = () => {
 
 const Home = () => {
 	return (
-		<div className='App'>
-			<div className='row mt-2 gx-1 container-fluid'>
+		<div className='App h-100 container-fluid'>
+			<div className='row mt-2 gx-1 h-50'>
 				<div className='col-6'>
 					<LineChart />
 				</div>
-				<div className="col-2">
+				<div className='col-2'>
 					<LastActivity />
 				</div>
-				<div className="col-4">
-					<ProgressBar />
+				<div className='col-4'>
+					<div>
+						<h5>Steps</h5>
+						<ProgressBar />
+						<div className='position-absolute end-0 me-3'>
+							<h6>Goal: 7500</h6>
+						</div>
+					</div>
+					<div className='mt-2'>
+						<h5>Floors</h5>
+						<ProgressBar />
+						<div className='position-absolute end-0 me-3'>
+							<h6>Goal: 7500</h6>
+						</div>
+					</div>
+					<div className='mt-2'>
+						<h5>Calories</h5>
+						<ProgressBar />
+						<div className='position-absolute end-0 me-3'>
+							<h6>Goal: 7500</h6>
+						</div>
+					</div>
+					<div className='mt-1'>
+					<PieChart />
+					</div>
 				</div>
 			</div>
 		</div>
