@@ -9,6 +9,7 @@ import Nutrition from './Pages/Nutrition';
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LastActivity from './components/LastActivity';
+import ProgressBar from './components/ProgressBar';
 
 const App = () => {
 	return (
@@ -28,12 +29,15 @@ const App = () => {
 const Home = () => {
 	return (
 		<div className='App'>
-			<div className='row'>
-				<div className='col-sm-6'>
+			<div className='row mt-2 gx-1 container-fluid'>
+				<div className='col-6'>
 					<LineChart />
 				</div>
-				<div className="col-sm-4">
+				<div className="col-2">
 					<LastActivity />
+				</div>
+				<div className="col-4">
+					<ProgressBar />
 				</div>
 			</div>
 		</div>
