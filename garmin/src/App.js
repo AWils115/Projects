@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LastActivity from './components/LastActivity';
 import ProgressBar from './components/ProgressBar';
 import PieChart from './components/PieChart';
+import DoughnutChart from './components/DoughnutChart';
+import MultiProgressBar from './components/MultiProgressBar';
 
 const App = () => {
 	return (
@@ -33,9 +35,16 @@ const Home = () => {
 			<div className='row mt-2 gx-1 h-50'>
 				<div className='col-6'>
 					<LineChart />
+					<div className='mt-1'>
+					<h5>Intensity Minutes</h5>
+						<MultiProgressBar />
+					</div>
 				</div>
 				<div className='col-2'>
 					<LastActivity />
+					<div className='mt-1'>
+						<DoughnutChart />
+					</div>
 				</div>
 				<div className='col-4'>
 					<div>
@@ -59,8 +68,8 @@ const Home = () => {
 							<h6>Goal: 7500</h6>
 						</div>
 					</div>
-					<div className='mt-1'>
-					<PieChart />
+					<div className='mt-4'>
+						<PieChart />
 					</div>
 				</div>
 			</div>

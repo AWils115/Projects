@@ -17,7 +17,8 @@ const ProgressBar = () => {
 	return (
 		<div className='progress'>
 			<div
-				className={`progress-bar w-25 ${barBackground(0.1)}`}
+				className={`progress-bar ${barBackground(0.1)}`}
+				style={{width: '25%'}}
 				role='progressbar'
 				aria-valuenow='25'
 				aria-valuemin='0'
